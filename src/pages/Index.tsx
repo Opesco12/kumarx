@@ -1,16 +1,36 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { Navbar } from "@/components/site/Navbar";
+import { Hero } from "@/components/site/Hero";
+import { Services } from "@/components/site/Services";
+import { HowItWorks } from "@/components/site/HowItWorks";
+import { Testimonials } from "@/components/site/Testimonials";
+import { WhyChoose } from "@/components/site/WhyChoose";
+import { CTA } from "@/components/site/CTA";
+import { Footer } from "@/components/site/Footer";
+import { WhatsAppFab } from "@/components/site/WhatsAppFab";
+import { useEffect } from "react";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  useEffect(() => {
+    document.title = "KumarX — Reliable Academic & Digital Solutions";
+    const desc = "KumarX helps students & professionals with project writing, CVs, design, data analysis, NYSC, NERD, and secure payments. Chat on WhatsApp.";
+    let m = document.querySelector('meta[name="description"]');
+    if (!m) { m = document.createElement("meta"); m.setAttribute("name", "description"); document.head.appendChild(m); }
+    m.setAttribute("content", desc);
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <main className="min-h-screen bg-background">
+      <Navbar />
+      <Hero />
+      <Services />
+      <HowItWorks />
+      <Testimonials />
+      <WhyChoose />
+      <CTA />
+      <Footer />
+      <WhatsAppFab />
+    </main>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
