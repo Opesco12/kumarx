@@ -1,5 +1,4 @@
-import { useEffect, useState } from "react";
-import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react";
+import { Star, Quote } from "lucide-react";
 import { useReveal } from "@/hooks/useReveal";
 
 const testimonials = [
@@ -13,66 +12,53 @@ const testimonials = [
 
 export const Testimonials = () => {
   const ref = useReveal<HTMLDivElement>();
-  const [i, setI] = useState(0);
-  const perView = 3;
-
-  useEffect(() => {
-    const id = setInterval(() => setI((p) => (p + 1) % testimonials.length), 4500);
-    return () => clearInterval(id);
-  }, []);
-
-  const prev = () => setI((p) => (p - 1 + testimonials.length) % testimonials.length);
-  const next = () => setI((p) => (p + 1) % testimonials.length);
-
-  const visible = Array.from({ length: perView }, (_, k) => testimonials[(i + k) % testimonials.length]);
+  // Duplicate list for seamless infinite scroll
+  const loop = [...testimonials, ...testimonials];
 
   return (
-    <section id="testimonials" ref={ref} className="py-20 md:py-28">
+    <section id="testimonials" ref={ref} className="py-20 md:py-28 overflow-hidden">
       <div className="container">
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-6 reveal">
-          <div className="max-w-xl">
-            <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-secondary-foreground text-xs font-semibold mb-4">
-              Testimonials
-            </span>
-            <h2 className="text-3xl md:text-5xl font-extrabold">
-              Loved by <span className="text-gradient">clients across Nigeria</span>
-            </h2>
-          </div>
-          <div className="flex gap-2">
-            <button onClick={prev} aria-label="Previous" className="w-12 h-12 rounded-full border border-border bg-card hover:bg-secondary transition grid place-items-center">
-              <ChevronLeft className="w-5 h-5" />
-            </button>
-            <button onClick={next} aria-label="Next" className="w-12 h-12 rounded-full border border-border bg-card hover:bg-secondary transition grid place-items-center">
-              <ChevronRight className="w-5 h-5" />
-            </button>
-          </div>
+        <div className="max-w-xl reveal">
+          <span className="inline-block px-4 py-1.5 rounded-full bg-secondary text-secondary-foreground text-xs font-semibold mb-4">
+            Testimonials
+          </span>
+          <h2 className="text-3xl md:text-5xl font-extrabold">
+            Loved by <span className="text-gradient">clients across Nigeria</span>
+          </h2>
         </div>
+      </div>
 
-        <div className="mt-12 grid md:grid-cols-2 lg:grid-cols-3 gap-6 reveal">
-          {visible.map((t, k) => (
-            <div
-              key={`${t.name}-${k}-${i}`}
-              className="bg-card border border-border rounded-3xl p-7 shadow-soft hover:shadow-elegant transition-all duration-500 animate-scale-in"
-              style={{ animationDelay: `${k * 100}ms` }}
-            >
-              <Quote className="w-8 h-8 text-primary/30" />
-              <div className="flex gap-0.5 mt-3">
-                {Array.from({ length: 5 }).map((_, idx) => (
-                  <Star key={idx} className="w-4 h-4 fill-accent text-accent" />
-                ))}
-              </div>
-              <p className="mt-4 text-foreground leading-relaxed">"{t.text}"</p>
-              <div className="mt-6 flex items-center gap-3 pt-5 border-t border-border">
-                <div className="w-11 h-11 rounded-full gradient-hero grid place-items-center text-primary-foreground font-bold">
-                  {t.name[0]}
+      <div className="mt-12 relative reveal">
+        {/* Edge fade masks */}
+        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 z-10 bg-gradient-to-r from-background to-transparent" />
+        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 z-10 bg-gradient-to-l from-background to-transparent" />
+
+        <div className="group flex overflow-hidden">
+          <div className="flex gap-6 animate-marquee group-hover:[animation-play-state:paused] shrink-0 pr-6">
+            {loop.map((t, k) => (
+              <div
+                key={`${t.name}-${k}`}
+                className="w-[320px] md:w-[380px] shrink-0 bg-card border border-border rounded-3xl p-7 shadow-soft hover:shadow-elegant transition-all duration-500"
+              >
+                <Quote className="w-8 h-8 text-primary/30" />
+                <div className="flex gap-0.5 mt-3">
+                  {Array.from({ length: 5 }).map((_, idx) => (
+                    <Star key={idx} className="w-4 h-4 fill-accent text-accent" />
+                  ))}
                 </div>
-                <div>
-                  <div className="font-semibold text-sm">{t.name}</div>
-                  <div className="text-xs text-muted-foreground">{t.role}</div>
+                <p className="mt-4 text-foreground leading-relaxed">"{t.text}"</p>
+                <div className="mt-6 flex items-center gap-3 pt-5 border-t border-border">
+                  <div className="w-11 h-11 rounded-full gradient-hero grid place-items-center text-primary-foreground font-bold">
+                    {t.name[0]}
+                  </div>
+                  <div>
+                    <div className="font-semibold text-sm">{t.name}</div>
+                    <div className="text-xs text-muted-foreground">{t.role}</div>
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
       </div>
     </section>
