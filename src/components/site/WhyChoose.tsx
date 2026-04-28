@@ -18,7 +18,7 @@ export const WhyChoose = () => {
             Why KumarX
           </span>
           <h2 className="text-3xl md:text-5xl font-extrabold">
-            Built on <span className="text-gradient">trust & results</span>
+            Built on <span className="text-primary">trust & results</span>
           </h2>
         </div>
 

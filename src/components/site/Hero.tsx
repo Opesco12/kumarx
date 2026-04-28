@@ -28,7 +28,7 @@ export const Hero = () => {
       <div className="container relative grid lg:grid-cols-[1.05fr_0.95fr] gap-12 lg:gap-16 items-center">
         <div className="opacity-0 animate-fade-in-slow">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold leading-[1.03] tracking-tight max-w-3xl">
-            <span className="text-gradient">KumarX</span> — Your Reliable
+            <span className="text-primary">KumarX</span> — Your Reliable
             Partner for Academic & Digital Solutions
           </h1>
           <p className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed">

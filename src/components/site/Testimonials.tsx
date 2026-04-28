@@ -23,7 +23,7 @@ export const Testimonials = () => {
             Testimonials
           </span>
           <h2 className="text-3xl md:text-5xl font-extrabold">
-            Loved by <span className="text-gradient">clients across Nigeria</span>
+            Loved by <span className="text-primary">clients across Nigeria</span>
           </h2>
         </div>
       </div>

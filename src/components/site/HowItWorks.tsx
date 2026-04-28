@@ -40,7 +40,7 @@ export const HowItWorks = () => {
             How it works
           </span>
           <h2 className="text-3xl md:text-5xl font-extrabold">
-            A smooth process from hello to <span className="text-gradient">done.</span>
+            A smooth process from hello to <span className="text-primary">done.</span>
           </h2>
           <p className="mt-4 text-muted-foreground text-lg">Built for speed and confidence, with full visibility at every step.</p>
         </div>
