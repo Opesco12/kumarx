@@ -29,10 +29,6 @@ export const Testimonials = () => {
       </div>
 
       <div className="mt-12 relative reveal">
-        {/* Edge fade masks */}
-        <div className="pointer-events-none absolute inset-y-0 left-0 w-24 z-10 bg-gradient-to-r from-background to-transparent" />
-        <div className="pointer-events-none absolute inset-y-0 right-0 w-24 z-10 bg-gradient-to-l from-background to-transparent" />
-
         <div className="group flex overflow-hidden">
           <div className="flex gap-6 animate-marquee group-hover:[animation-play-state:paused] shrink-0 pr-6">
             {loop.map((t, k) => (

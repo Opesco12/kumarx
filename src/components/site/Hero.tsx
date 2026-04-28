@@ -20,8 +20,8 @@ export const Hero = () => {
       id="top"
       className="relative pt-28 md:pt-36 pb-20 md:pb-28 overflow-hidden"
     >
-      <div className="absolute inset-0 gradient-warm opacity-80" />
-      <div className="absolute inset-0 section-grid opacity-50 [mask-image:radial-gradient(circle_at_center,black_10%,transparent_85%)]" />
+      <div className="absolute inset-0 bg-background" />
+      <div className="absolute inset-0 section-grid opacity-35" />
       <div className="absolute -top-28 -right-24 w-[430px] h-[430px] rounded-full bg-primary/20 blur-3xl" />
       <div className="absolute top-40 -left-20 w-[380px] h-[380px] rounded-full bg-accent/20 blur-3xl" />
 
@@ -74,10 +74,10 @@ export const Hero = () => {
 
         <div className="relative opacity-0 animate-fade-in-slow [animation-delay:200ms]">
           <div className="relative mx-auto max-w-lg">
-            <div className="absolute inset-0 gradient-hero rounded-[2.5rem] rotate-6 shadow-elegant" />
+            <div className="absolute inset-0 bg-primary/10 rounded-[2.5rem] rotate-6 shadow-elegant" />
             <div className="relative bg-card rounded-[2.5rem] p-8 shadow-elegant border border-border">
               <div className="flex items-center gap-3 pb-4 border-b border-border">
-                <div className="w-12 h-12 rounded-full gradient-hero grid place-items-center text-primary-foreground font-bold">
+                <div className="w-12 h-12 rounded-full bg-primary grid place-items-center text-primary-foreground font-bold">
                   K
                 </div>
                 <div>

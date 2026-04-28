@@ -11,7 +11,7 @@ const items = [
 export const WhyChoose = () => {
   const ref = useReveal<HTMLDivElement>();
   return (
-    <section id="why" ref={ref} className="py-20 md:py-28 gradient-soft">
+    <section id="why" ref={ref} className="py-20 md:py-28 bg-background">
       <div className="container">
         <div className="max-w-2xl mx-auto text-center reveal">
           <span className="inline-block px-4 py-1.5 rounded-full bg-background text-secondary-foreground text-xs font-semibold mb-4 shadow-soft">
@@ -31,7 +31,7 @@ export const WhyChoose = () => {
                 className="reveal text-center bg-card border border-border rounded-3xl p-8 shadow-soft hover:shadow-elegant hover:-translate-y-1 transition-all"
                 style={{ transitionDelay: `${i * 60}ms` }}
               >
-                <div className="mx-auto w-16 h-16 rounded-2xl gradient-hero grid place-items-center text-primary-foreground shadow-glow mb-5">
+                <div className="mx-auto w-16 h-16 rounded-2xl bg-primary grid place-items-center text-primary-foreground shadow-glow mb-5">
                   <Icon className="w-8 h-8" />
                 </div>
                 <h3 className="font-bold text-lg">{it.title}</h3>

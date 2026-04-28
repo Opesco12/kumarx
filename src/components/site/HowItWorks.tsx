@@ -31,7 +31,7 @@ const steps = [
 export const HowItWorks = () => {
   const ref = useReveal<HTMLDivElement>();
   return (
-    <section id="how" ref={ref} className="py-20 md:py-28 gradient-soft relative overflow-hidden">
+    <section id="how" ref={ref} className="py-20 md:py-28 bg-background relative overflow-hidden">
       <div className="absolute inset-0 section-grid opacity-45" />
       <div className="absolute -bottom-32 left-1/2 -translate-x-1/2 w-[650px] h-[650px] rounded-full bg-primary/10 blur-3xl" />
       <div className="container">
@@ -67,7 +67,7 @@ export const HowItWorks = () => {
                   <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-secondary text-secondary-foreground text-xs font-semibold">
                     Step {i + 1}
                   </div>
-                  <div className="mt-4 w-12 h-12 rounded-2xl gradient-hero text-primary-foreground grid place-items-center shadow-soft">
+                  <div className="mt-4 w-12 h-12 rounded-2xl bg-primary text-primary-foreground grid place-items-center shadow-soft">
                     <Icon className="w-6 h-6" />
                   </div>
                   <h3 className="mt-5 font-bold text-lg">{s.title}</h3>
