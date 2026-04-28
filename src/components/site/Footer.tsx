@@ -6,9 +6,8 @@ export const Footer = () => {
     <footer className="border-t border-border bg-card">
       <div className="container py-14 grid md:grid-cols-4 gap-10">
         <div className="md:col-span-2">
-          <a href="#top" className="flex items-center gap-2 font-display font-extrabold text-xl">
-            <span className="w-9 h-9 rounded-xl gradient-hero grid place-items-center text-primary-foreground">K</span>
-            Kumar<span className="text-primary">X</span>
+          <a href="#top" className="flex items-center font-display font-extrabold text-xl">
+            <span>Kumar<span className="text-primary">X</span></span>
           </a>
           <p className="mt-4 text-muted-foreground max-w-sm leading-relaxed">
             Your reliable partner for academic & digital solutions. Fast, affordable, professional.

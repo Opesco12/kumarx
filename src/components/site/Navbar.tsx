@@ -23,20 +23,21 @@ export const Navbar = () => {
   return (
     <header
       className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-background/80 backdrop-blur-md shadow-soft" : "bg-transparent"
+        scrolled ? "bg-background/86 backdrop-blur-xl shadow-soft border-b border-border/70" : "bg-transparent"
       }`}
     >
       <nav className="container flex items-center justify-between h-16 md:h-20">
-        <a href="#top" className="flex items-center gap-2 font-display font-extrabold text-xl">
-          <span className="w-9 h-9 rounded-xl gradient-hero grid place-items-center text-primary-foreground shadow-soft">
-            K
-          </span>
+        <a href="#top" className="flex items-center font-display font-extrabold text-xl">
           <span>Kumar<span className="text-primary">X</span></span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
           {links.map((l) => (
-            <a key={l.href} href={l.href} className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
+            <a
+              key={l.href}
+              href={l.href}
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors relative after:absolute after:-bottom-1.5 after:left-0 after:h-0.5 after:w-0 after:bg-primary after:transition-all hover:after:w-full"
+            >
               {l.label}
             </a>
           ))}
