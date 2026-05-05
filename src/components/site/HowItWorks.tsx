@@ -98,13 +98,6 @@ export const HowItWorks = () => {
             );
           })}
         </div>
-
-        <div className="reveal mt-10 max-w-3xl mx-auto rounded-3xl border border-border bg-card/85 p-6 md:p-8 shadow-soft text-center">
-          <p className="text-sm md:text-base text-foreground">
-            Need a custom timeline? We tailor delivery windows to your deadline
-            and keep you updated from kickoff to handoff.
-          </p>
-        </div>
       </div>
     </section>
   );
