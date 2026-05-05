@@ -6,15 +6,31 @@ export const Footer = () => {
     <footer className="border-t border-border bg-card">
       <div className="container py-14 grid md:grid-cols-4 gap-10">
         <div className="md:col-span-2">
-          <a href="#top" className="flex items-center font-display font-extrabold text-xl">
-            <span>Kumar<span className="text-primary">X</span></span>
+          <a
+            href="#top"
+            className="flex items-center font-display font-extrabold text-xl"
+          >
+            <span>
+              Kumar<span className="text-primary">X</span>
+            </span>
           </a>
           <p className="mt-4 text-muted-foreground max-w-sm leading-relaxed">
-            Your reliable partner for academic & digital solutions. Fast, affordable, professional.
+            Your reliable partner for academic & digital solutions. Fast,
+            affordable, professional.
           </p>
           <div className="mt-5 flex gap-3">
-            <a href="#" aria-label="Instagram" className="w-10 h-10 rounded-full bg-secondary grid place-items-center hover:bg-primary hover:text-primary-foreground transition"><Instagram className="w-4 h-4" /></a>
-            <a href="#" aria-label="X" className="w-10 h-10 rounded-full bg-secondary grid place-items-center hover:bg-primary hover:text-primary-foreground transition">
+            <a
+              href="#"
+              aria-label="Instagram"
+              className="w-10 h-10 rounded-full bg-secondary grid place-items-center hover:bg-primary hover:text-primary-foreground transition"
+            >
+              <Instagram className="w-4 h-4" />
+            </a>
+            <a
+              href="#"
+              aria-label="X"
+              className="w-10 h-10 rounded-full bg-secondary grid place-items-center hover:bg-primary hover:text-primary-foreground transition"
+            >
               <svg
                 viewBox="0 0 24 24"
                 aria-hidden="true"
@@ -23,27 +39,70 @@ export const Footer = () => {
                 <path d="M18.244 2H21.5l-7.11 8.128L22 22h-5.956l-4.663-6.094L6.05 22H2.79l7.605-8.691L2 2h6.104l4.215 5.58L18.244 2zm-1.043 18.162h1.803L7.125 3.742H5.19L17.2 20.162z" />
               </svg>
             </a>
-            <a href="#" aria-label="Facebook" className="w-10 h-10 rounded-full bg-secondary grid place-items-center hover:bg-primary hover:text-primary-foreground transition"><Facebook className="w-4 h-4" /></a>
+            <a
+              href="#"
+              aria-label="Facebook"
+              className="w-10 h-10 rounded-full bg-secondary grid place-items-center hover:bg-primary hover:text-primary-foreground transition"
+            >
+              <Facebook className="w-4 h-4" />
+            </a>
           </div>
         </div>
 
         <div>
           <h4 className="font-bold mb-4">Quick links</h4>
           <ul className="space-y-2 text-sm text-muted-foreground">
-            <li><a href="#services" className="hover:text-foreground transition">Services</a></li>
-            <li><a href="#how" className="hover:text-foreground transition">How it works</a></li>
-            <li><a href="#testimonials" className="hover:text-foreground transition">Testimonials</a></li>
-            <li><a href="#why" className="hover:text-foreground transition">Why choose us</a></li>
+            <li>
+              <a
+                href="#services"
+                className="hover:text-foreground transition"
+              >
+                Services
+              </a>
+            </li>
+            <li>
+              <a
+                href="#how"
+                className="hover:text-foreground transition"
+              >
+                How it works
+              </a>
+            </li>
+            <li>
+              <a
+                href="#testimonials"
+                className="hover:text-foreground transition"
+              >
+                Testimonials
+              </a>
+            </li>
+            <li>
+              <a
+                href="#why"
+                className="hover:text-foreground transition"
+              >
+                Why choose us
+              </a>
+            </li>
           </ul>
         </div>
 
         <div>
           <h4 className="font-bold mb-4">Contact</h4>
           <ul className="space-y-3 text-sm text-muted-foreground">
-            <li className="flex items-center gap-2"><Mail className="w-4 h-4 text-primary" /> hello@kumarx.com</li>
-            <li className="flex items-center gap-2"><Phone className="w-4 h-4 text-primary" /> +234 800 000 0000</li>
+            <li className="flex items-center gap-2">
+              <Mail className="w-4 h-4 text-primary" /> hello@kumarx.com
+            </li>
+            <li className="flex items-center gap-2">
+              <Phone className="w-4 h-4 text-primary" /> +234 810 673 7046
+            </li>
             <li>
-              <a href={whatsappLink()} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 mt-2 px-4 h-10 rounded-full bg-whatsapp text-whatsapp-foreground font-semibold hover:opacity-90 transition">
+              <a
+                href={whatsappLink()}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 mt-2 px-4 h-10 rounded-full bg-whatsapp text-whatsapp-foreground font-semibold hover:opacity-90 transition"
+              >
                 <MessageCircle className="w-4 h-4" /> WhatsApp us
               </a>
             </li>

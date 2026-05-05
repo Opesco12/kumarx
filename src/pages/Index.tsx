@@ -19,16 +19,18 @@ const Index = () => {
   }, []);
 
   return (
-    <main className="min-h-screen bg-background">
-      <Navbar />
-      <Hero />
-      <Services />
-      <HowItWorks />
-      <Testimonials />
-      <WhyChoose />
-      <CTA />
-      <Footer />
-      <WhatsAppFab />
+    <main className="relative min-h-screen bg-background overflow-hidden">
+      <div className="relative z-10">
+        <Navbar />
+        <Hero />
+        <Services />
+        <HowItWorks />
+        <Testimonials />
+        <WhyChoose />
+        <CTA />
+        <Footer />
+        <WhatsAppFab />
+      </div>
     </main>
   );
 };
